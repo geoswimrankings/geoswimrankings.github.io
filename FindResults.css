@@ -1,0 +1,853 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 9px;
+}
+
+/* ზოგადი ვერსია */
+
+.hide{
+    display: none;
+}
+
+    
+    .bubbles {
+        position: fixed;
+        background-image: url('bubble.png');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: revert;
+        height: 30px;
+        width: 30px;
+    }
+
+    #bk {
+        position: absolute;
+        background-image: url('upperPart3.png');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 16vh;
+        width: 100vw;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
+    
+#background01 {
+    position: fixed;
+    background-image: url('pool5.jpg');
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 14vh;
+    left: 0;
+    width: 100%;
+    height: 86vh;
+}
+
+#options {
+    z-index: 40;
+    position: absolute;
+    top: 30vh;
+    left: 40%;
+    width: 50vw;
+}
+
+
+#information5 {
+    position: fixed;
+    width: 105%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+    padding: 0px 7px;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgb(140, 140, 187);
+}
+
+#text5 {
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#close5 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 15px;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#bold5 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#main {
+    align-items: center;
+}
+
+
+#countDowns {
+    display: grid;
+    align-items: center;
+}
+
+#nameLabel {
+    font-size: 11px;
+}
+
+.numbers{
+    font-size: 14px;
+}
+
+
+.paddingForCompName {
+    margin-bottom: 4px;
+    padding: 1.1px;
+    border-radius: 2px;
+}
+
+.searchedNames {
+    background-color: rgb(146, 147, 211);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.searchedNames:hover {
+    background-color: rgb(175, 177, 240);
+}
+
+#form1 {
+    margin-top: 2vh;
+    position: absolute;
+    top: 19vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 11px;
+    display: grid;
+    grid-template-columns: 55% 50%;
+    z-index: 60;
+}
+.selectYearComp  {
+    font-size: 11px;
+}
+
+
+.yearCompFont {
+    font-size: 11px;
+}
+
+.findCompResults {
+    display: grid;
+    grid-template-columns: 50% 19% 12% 9% 18%;
+    font-size: 6px;
+}
+
+#find{
+    position: absolute;
+    min-width: 13vw;
+    top: 26vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 10px;
+}
+
+.events {
+    cursor: pointer;
+    font-weight:600;
+    margin-bottom: 2px;
+    background-color: rgb(206, 207, 241);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 25% 8% 15% 7% 14% 33%;
+    font-size: 11px;
+}
+
+#header {
+    position: absolute;
+    top: 32vh;
+    left: 2vw;
+    width: 96vw;
+    display: grid;
+    grid-template-columns: 22% 10% 14% 11% 15% 20%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+
+#mainBar {
+    z-index: 100;
+    position: absolute;
+    min-width: 20vw;
+    font-size: 11px;
+    top: 15.5vh;
+    left: 1vw;
+}
+
+#barContainer {
+    border-right: 2px solid black;
+}
+
+.barControler {
+    color:black;
+}
+
+#menu {
+    position: absolute;
+    top: 12vh;
+    left: 2vw;
+    width: 12vw;
+    height: 3vh;
+}
+
+#barOpener {
+   border: 1.8px solid black;
+   position: relative;
+   padding: 2px;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   left: 50%;
+   transform: translate(-50%,0);
+   color:black;
+}
+
+#barCloser {
+    border: 1.8px solid black;
+    position: relative;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 2px;
+    left: 50%;
+    transform: translate(-50%,0);
+ }
+ 
+
+.bars {
+    padding: 1px;
+    text-align: center;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgb(94, 96, 209);
+    font-size: 10px;
+    background-color: rgb(210, 210, 233);
+    z-index: 100;
+}
+
+.bars:hover {
+    padding: 1px;
+    text-align: center;
+    margin: 3px;
+    border-radius: 2px;
+}
+
+input {
+    border: none;    
+    outline: none;
+    height: 20px;
+}
+
+select{
+    border: none;
+    outline: none;
+    height: 20px;
+}
+
+#name {
+  background: none;
+  border-bottom: 2px solid black;
+  font-size: 12px;
+  padding: 0;
+  height: 14px;
+  width: 140px;
+}
+
+
+
+#yearDiv {
+    position: absolute;
+    top: 23vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 13px;
+    display: flex;
+}
+
+#year2{
+    margin-left: 2px;
+}
+#year1{
+    margin-right: 3px;
+}
+
+#top10 {
+    position: absolute;
+    top: 21vh;
+    left: 50vw;
+    transform: translate(-50%,0);
+    display: flex;
+    font-size: 12px;
+}
+
+
+#ratings{
+    position: absolute;
+    top: 27vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: grid;
+    font-size: 13px;
+}
+
+.ratings {
+    margin: 5px;
+    min-width: 140px;
+    border-bottom: 2px solid black;
+    text-align: center;
+    margin-top: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.zone {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+#tableDiv {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    width: 84%;
+    height: 70%;
+    font-size: 8px;
+}
+#tableDiv1 {
+    position: absolute;
+    top: 160%;
+    left: 8%;
+    width: 84%;
+    height: 70%;
+    font-size: 8px;
+}
+
+.tableHeaders {
+    margin-bottom: 7%;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td {
+    padding: 3px;
+}
+
+
+.zones {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 2px solid black;
+}
+
+#topsHeader {
+    position: absolute;
+    top: 20vh;
+    left: 2vw;
+    font-size: 9.7px;
+    grid-template-columns: 4% 27% 16% 20% 13% 9% 7%;
+    width: 96vw;
+}
+
+#header4 {
+    font-weight: 600;
+    font-size: 11px;
+    position: absolute;
+    top: 16.5vh;
+    left: 21vw;
+    text-align: center;
+    width: 78vw;
+    height: 4vh;
+}
+
+#topsList {
+    position: absolute;
+    top: 24vh;
+    left: 1vw;
+    width: 98vw;
+    display: grid;
+    grid-template-columns: 4% 34.5% 9% 21% 13.5% 7% 6%;
+    font-size: 9.2px;
+}
+
+#compName #compNameLabel {
+    display: none;
+}
+
+.data {
+    margin: 2px;
+}
+
+#AllResults {
+    position: absolute;
+    top: 36vh;
+    left: 2vw;
+    width: 96vw;
+    height: 60vh;
+}
+
+
+#finaPointsCalc {
+    position: absolute;
+    top: 55vh;
+    left: 15vw;
+    width: 70vw;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    text-align: center;
+}
+
+.chosen{
+    background-color: rgb(34, 102, 141);
+}
+
+
+#competitionResults {
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    font-size: 9px;
+    width: 80%;
+}
+
+.mainCompHeader {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.headerOfCompResults {
+    font-weight: 600;
+    margin-bottom: 7px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#properties {
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+    height: 15vh;
+    min-width: 80vw;
+    display: grid;
+}
+
+#compNamesDiv {
+    position: absolute;
+    top: 8vh;
+    left: 4%;
+    width: 92vw;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 82% 12%;
+}
+
+.countdowns{
+    margin-bottom: 25px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#STRlogo {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 12vw;
+    height: 12vw;
+    background-image: url('strlogo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    z-index: 6;
+}
+
+.futureCompNameHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    margin-bottom: 7px; 
+}
+
+.chooseColor {
+    color: rgb(201, 23, 23);
+    font-size: 13px;
+    font-weight: 550;
+}
+
+#mainDiv{
+    position: absolute;
+    top: 29vh;
+    left: 4vw;
+    width: 92vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    z-index: 99;
+}
+
+#search2{
+    position: absolute;
+    top: 4vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 1px 6px;
+
+}
+
+.properties {
+    display: flex;
+    margin: auto;
+}
+#competitionsList {
+    position: absolute;
+    top: 20vh;
+    left: 4vw;
+    width: 92vw;
+    height: 70vh;
+}
+
+#yearDivComp {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+    display: flex;
+}
+
+.prop {
+    border: 1.5px solid black;
+    padding: 1vw;
+    margin-bottom: 1vh;
+    font-size: 14px;
+}
+
+#timesToPoints {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    width: 80vw;
+    height: 7vh;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 27% 63%;
+}
+
+#calculate {
+    position: absolute;
+    top: 24.5vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 2px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.labelName {
+    font-size: 14px;
+}
+
+.timeAndPoint {
+    position: absolute;
+    min-width: 15vw;
+    height: 3vh;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+
+.numbers {
+    border: 1.5px solid black;
+    padding-top: 3.3vh;
+    border-radius: 50%;
+    margin: 1vw;
+}
+
+
+
+
+#newsAboutMinjo {
+    position: fixed;
+    top: 20%;
+    left: 7%;
+    height: 75%;
+    width: 86%;
+    border: 2px solid black;
+    z-index: 96;
+    background-image: url('angrySwimmer.jpg');
+    background-position: center top;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+
+#newsText {
+    position: relative;
+    top: 55%;
+    text-align: center;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+#newsButton {
+    position: fixed;
+    top: 89%;
+    left: 50%;   
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 97;
+    font-size: 12px;
+    transform: translate(-50%,0);
+}
+
+
+
+.show {
+    display: grid;
+}
+
+#barOpener {
+    background-color: rgb(138, 202, 228);
+}
+
+#barCloser {
+    background-color: rgb(138, 202, 228);
+}
+
+
+#font {
+    position: fixed;
+    top: 16%;
+    width: 90%;
+    height: 84%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: rgba(255, 255, 255, 0.808);
+    opacity: 0.9;
+}
+
+#whitePage {
+  display: none;
+} 
+
+.bubbles {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: url('bubble.png');
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: revert;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+}
+
+#whitePage1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    z-index: 100;
+    text-align: center;
+    font-size: 25px;
+} 
+
+/* კომპიუტერის ვერსია */ 
+
+@media all and (min-width: 600px) {
+
+    #whitePage {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        z-index: 100;
+        text-align: center;
+        font-size: 25px;
+    } 
+
+    #mainBar {
+        display: none;
+    }
+
+    .bubbles {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        background-image: url('bubble.png');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: revert;
+        height: 50px;
+        width: 50px;
+        z-index: 99;
+    }
+
+/*
+    .barControler {
+        display: none;
+    }
+
+    #background01 {
+        position: fixed;
+        background-image: url('background.png');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+
+
+    .bars {
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px;
+        font-size: 12px;
+        width: 90px;
+    }
+
+    #countdowns {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,0);
+        display: flex;
+        z-index: 70;
+    }
+
+    
+    #main:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    #competitions:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    #athletes:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    #topAthletes:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    #finaPoints:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    #geoRecords:hover {
+        background-color: rgb(128, 233, 233);
+        cursor: pointer;
+    } 
+
+    .barOpener {
+        position: fixed;
+        top: 30px;
+        left: 100px;
+    }
+
+    #bk {
+        display: none;
+    }
+
+ 
+    #STRLogo {
+       display: none;
+    }
+
+    #mainBar {
+        position: fixed;
+        display: grid;
+        grid-template-columns: 17% 17% 17% 17% 17% 17%;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%,0);
+        min-width: 5vw;
+    }
+
+   #font {
+       position: fixed;
+       top: 0;
+       width: 80%;
+       height: 100%;
+       left: 50%;
+       transform: translate(-50%,0);
+       background-color: rgba(255, 255, 255, 0.808);
+       opacity: 0.9;
+   }
+   */
+}
+
+

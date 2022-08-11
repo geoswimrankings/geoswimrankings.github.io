@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSwimRankings</title>
+    <link rel="stylesheet" href="FindResults.css">
+</head>
+
+<body>
+
+    <div id="whitePage1">საიტმა შეწყვიტა ფუნქციონირება არასაკმარისი დაინტერესების გამო</div>
+    <div id="STRlogo"></div>
+
+    <div id="bubble1"></div>
+    <div id="bubble2"></div>
+    <div id="bubble3"></div>
+    <div id="bubble4"></div>
+    <div id="bubble5"></div>
+
+
+
+    <div id="background01"></div>
+    <div id="background02"></div>
+
+    <div id="font"></div>
+    <div id="whitePage">საიტმა შეწყვიტა ფუნქციონირება არასაკმარისი დაინტერესების გამო</div>
+    <div id="bk"></div>
+    <div id="menu">
+        <button class="barControler" id='barOpener'>Menu</button>
+        <button class='barControler hide' id='barCloser'>Menu</button>
+    </div>
+    <!-- თუ მოგინდება ბარის გამოჩენა - წაშალე Hide აქ -->
+    <div id="mainBar hide">
+        <div class="bars hide" id="main">მთავარი</div>
+        <div class="bars hide" id="competitions">შეჯიბრები</div>
+        <div class="bars hide" id="athletes">სპორტსმენები</div>
+        <div class="bars hide" id="topAthletes">რეიტინგი </div>
+        <div class="bars hide" id="finaPoints">Fina-ს ქულები</div>
+        <div class="bars hide" id="geoRecords">რეკორდები</div>
+    </div>
+
+
+    <div class="showHide hide" id="mainForm">
+        <div id="form1">
+            <div>
+                <label id='nameLabel'>გვარი და სახელი:</label>
+            </div>
+            <div>
+                <input id='name' type="text" value="">
+            </div>
+        </div>
+        <button id="find">ძიება</button>
+
+        <div class='hide' id="afterFindClick">
+            <div id='headerHider'>
+                <div id="header">
+                    <div>დისციპლინა</div>
+                    <div>აუზი</div>
+                    <div>შედეგი</div>
+                    <div>ქულა</div>
+                    <div>თარიღი</div>
+                    <div>შეჯიბრი</div>
+                </div>
+            </div>
+            <div id="AllResults">
+                <div class='information' id="50Free"></div>
+                <div class='information' id="50FreeAllResults"></div>
+                <div class='information' id="100Free"></div>
+                <div class='information' id="100FreeAllResults"></div>
+                <div class='information' id="200Free"></div>
+                <div class='information' id="200FreeAllResults"></div>
+                <div class='information' id="400Free"></div>
+                <div class='information' id="400FreeAllResults"></div>
+                <div class='information' id="800Free"></div>
+                <div class='information' id="800FreeAllResults"></div>
+                <div class='information' id="1500Free"></div>
+                <div class='information' id="1500FreeAllResults"></div>
+                <div class='information' id="50Fly"></div>
+                <div class='information' id="50FlyAllResults"></div>
+                <div class='information' id="100Fly"></div>
+                <div class='information' id="100FlyAllResults"></div>
+                <div class='information' id="200Fly"></div>
+                <div class='information' id="200FlyAllResults"></div>
+                <div class='information' id="50Back"></div>
+                <div class='information' id="50BackAllResults"></div>
+                <div class='information' id="100Back"></div>
+                <div class='information' id="100BackAllResults"></div>
+                <div class='information' id="200Back"></div>
+                <div class='information' id="200BackAllResults"></div>
+                <div class='information' id="50Breast"></div>
+                <div class='information' id="50BreastAllResults"></div>
+                <div class='information' id="100Breast"></div>
+                <div class='information' id="100BreastAllResults"></div>
+                <div class='information' id="200Breast"></div>
+                <div class='information' id="200BreastAllResults"></div>
+                <div class='information' id="100IM"></div>
+                <div class='information' id="100IMAllResults"></div>
+                <div class='information' id="200IM"></div>
+                <div class='information' id="200IMAllResults"></div>
+                <div class='information' id="400IM"></div>
+                <div class='information' id="400IMAllResults"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div id="options"></div>
+
+
+
+    <div class="showHide hide" id="ratingsBar">
+        <div id="yearDiv">
+            <div id="yearDiv1">
+                <span>წელი: </span><select id="year1">
+                    <option selected disabled>-დან</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </div>
+            <div id="yearDiv2">
+                <span>-</span>
+                <select id="year2">
+                    <option selected disabled>-მდე</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="rating" id="ratings">
+            <div id="information5" class="hide">
+                <div id="text5">ცურვის მწვრთნელთა საბჭოს გადაწყვეტილებით, 50 მეტრ დისტანციაზე დაფიქსირებული ქულები
+                    რეიტინგში ეთვლებათ მხოლოდ 18 წელზე უფროსი ასაკის მოცურავეებს(სენიორებს).<nav id='bold5'> შესაბამისად
+                        ჯუნიორების და კადეტების 50 მეტრი დისტანციის ქულები რეიტინგებში არ არის დაფიქსირებული. </nav>
+                    მათი შედეგები ამ დისტანციაზე შეგიძლიათ მოიძოთ გრაფა "სპორცმენებში".</div>
+                <div id="close5">დახურვა</div>
+            </div>
+            <div class='ratings' id="allRatings"> ქართველი მოცურავეების საერთო რეიტინგი</div>
+            <div class='zone'>
+                <div class="ratings zones" id="allGirlsRatings">ქალები</div>
+                <div class="ratings zones" id="allBoysRatings">კაცები</div>
+            </div>
+            <div class='ratings' id="under18Ratings">იუნიორების რეიტინგი</div>
+            <div class='zone'>
+                <div class="ratings zones" id="U18Girls">გოგონები</div>
+                <div class="ratings zones" id="U18Boys">ბიჭები</div>
+            </div>
+            <div class='ratings' id="juniorRatings">კადეტების რეიტინგი</div>
+            <div class='zone'>
+                <div class="ratings zones" id="juniorGirls">გოგონები</div>
+                <div class="ratings zones" id="juniorBoys">ბიჭები</div>
+            </div>
+            <div class='ratings' id="top10Girls">საუკეთესო 10 ქალი</div>
+            <div class='ratings' id="top10Boys">საუკეთესო 10 კაცი</div>
+        </div>
+    </div>
+
+    <div id="header4"></div>
+    <div class="hide" id="topsList"></div>
+    <div class='hide' id="topsHeader">
+        <div>#:</div>
+        <div>სახელი</div>
+        <div>დაბ.წელი</div>
+        <div>დისციპლინა</div>
+        <div>შედეგი</div>
+        <div>ქულა</div>
+        <div>თარიღი</div>
+    </div>
+
+    <div class="hide" id="finaDiv">
+        <div id="finaPointsCalc">
+            <div id="7n" class="numbers">7</div>
+            <div id="8n" class="numbers">8</div>
+            <div id="9n" class="numbers">9</div>
+            <div id="4n" class="numbers">4</div>
+            <div id="5n" class="numbers">5</div>
+            <div id="6n" class="numbers">6</div>
+            <div id="1n" class="numbers">1</div>
+            <div id="2n" class="numbers">2</div>
+            <div id="3n" class="numbers">3</div>
+            <div id="delete" class="numbers">წაშლა</div>
+            <div id="0n" class="numbers">0</div>
+            <div id="delete1" class="numbers">
+                გამოთვლა </div>
+        </div>
+        <div id="properties">
+            <div class="properties" id="coursePoints">
+                <div id="25mCourse" class="prop coursePoints">25 მეტრი</div>
+                <div id="50mCourse" class="prop coursePoints chosen">50 მეტრი</div>
+            </div>
+            <div class="properties" id="genderPoints">
+                <div id="womanGender" class="prop genderPoints">ქალები</div>
+                <div id="manGender" class="prop genderPoints chosen">კაცები</div>
+            </div>
+            <div class="properties" id='stylesPoints'>
+                <div id="freePoints" class="prop stylesPoints chosen">თ/ყ</div>
+                <div id="flyPoints" class="prop stylesPoints">ბატ.</div>
+                <div id="backPoints" class="prop stylesPoints">გ/ც</div>
+                <div id="breastPoints" class="prop stylesPoints">ბრასი</div>
+                <div id="IMPoints" class="prop stylesPoints">კომპლექსი</div>
+            </div>
+            <div class="properties" id="distance">
+                <div id="50m" class="prop distance">50</div>
+                <div id="100m" class="prop distance chosen">100</div>
+                <div id="200m" class="prop distance">200</div>
+                <div id="400m" class="prop distance">400</div>
+                <div id="800m" class="prop distance">800</div>
+                <div id="1500m" class="prop distance">1500</div>
+            </div>
+        </div>
+        <div id="timesToPoints">
+            <div><label class='labelName'>შედეგი:</label><span class="timeAndPoint chosen" id='swimmerTime'></span>
+            </div>
+            <div> <label class='labelName'>ქულა:</label><span class="timeAndPoint" id='swimmerPoints'></span></div>
+        </div>
+        <div id="calculate">გამოთვლა</div>
+    </div>
+    </div>
+
+
+
+    <div id="competitionsDiv" class="hide">
+        <div id="competitionsList">
+            <div id="yearDivComp">
+                <div class='selectYearComp' id="yearDivComp1">
+                    <span>წელი: </span><select class='yearCompFont' id="yearComp1">
+                        <option selected disabled>-დან</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+                <div class='selectYearComp' id="yearDivComp2">
+                    <span>-</span>
+                    <select class='yearCompFont' id="yearComp2">
+                        <option selected disabled>-მდე</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </div>
+                <button id="search2">ძიება</button>
+            </div>
+            <div id="compNamesDiv"></div>
+        </div>
+    </div>
+
+    <div id="competitionResults"></div>
+
+    <div id="main1">
+        <div id="mainDiv">
+            <div id="countDowns">
+                <div id="futureCompName1" class="futureCompNameHeader">2022 world Aquatic Championships (Budapest,
+                    Hungary)</div>
+                <div class="futureCompNameHeader">26 ივნისი - 03 ივლისი</div>
+                <div id="countdown1" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2022 Summer World University Games (Ghendu,
+                    China)</div>
+                <div class="futureCompNameHeader">26 ივნისი - 07 ივლისი</div>
+                <div id="countdown2" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2022 European Junior Championships (Otopei,
+                    Romania)</div>
+                <div class="futureCompNameHeader">05 ივლისი - 10 ივლისი</div>
+                <div id="countdown3" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2022 European Youth Olympic Festival (Banska,
+                    Slovakia)</div>
+                <div class="futureCompNameHeader">24 ივლისი - 30 ივლისი</div>
+                <div id="countdown4" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2022 European Aquatics Championship (Rome, Italy)
+                </div>
+                <div class="futureCompNameHeader">11 აგვისტო - 21 აგვისტო</div>
+                <div id="countdown5" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2022 Fina World Swimming Championships (Kazan,
+                    Russia)</div>
+                <div class="futureCompNameHeader">17 დეკემბერი - 22 დეკემბერი</div>
+                <div id="countdown6" class="countdowns"></div>
+                <div id="futureCompName1" class="futureCompNameHeader">2024 Olympic Games (Paris, France)</div>
+                <div class="futureCompNameHeader">26 ივლისი - 11 აგვისტო</div>
+                <div id="countdown7" class="countdowns"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tables" class='hide'>
+        <div id="tableDiv">
+            <table id='table'>
+                <caption class="tableHeaders">საქართველოს ნაციონალური რეკორდები (კაცები, 50მ აუზი)</caption>
+                <tr>
+                    <th>დისციპლინა</th>
+                    <th>შედეგი</th>
+                    <th>გვარი/სახელი</th>
+                    <th>წარმომავლობა</th>
+                    <th>დაბადების თარიღი</th>
+                    <th>თარიღი/ლოკაცია</th>
+                </tr>
+                <tr>
+                    <td>50 თ/ყ</td>
+                    <td>00.23:29</td>
+                    <td>აბესაძე დავით</td>
+                    <td>რუსთავი</td>
+                    <td>2002</td>
+                    <td>2021 ათენი</td>
+                </tr>
+                <tr>
+                    <td>100 თ/ყ</td>
+                    <td>00.51:33</td>
+                    <td>აბესაძე დავით</td>
+                    <td>რუსთავი</td>
+                    <td>2002</td>
+                    <td>2021 სოფია</td>
+                </tr>
+                <tr>
+                    <td>200 თ/ყ</td>
+                    <td>01.51:45</td>
+                    <td>კობახიძე თეიმურაზ</td>
+                    <td>თბილისი</td>
+                    <td>1995</td>
+                    <td>2016 ბრესტი</td>
+                </tr>
+                <tr>
+                    <td>400 თ/ყ</td>
+                    <td>03.56:05</td>
+                    <td>რევიშვილი ირაკლი</td>
+                    <td>თბილისი</td>
+                    <td>1989</td>
+                    <td>2016 ბრესტი</td>
+                </tr>
+                <tr>
+                    <td>800 თ/ყ</td>
+                    <td>08.13:43</td>
+                    <td>კუშპელოვ იგორ</td>
+                    <td>თბილისი</td>
+                    <td>1959</td>
+                    <td>1977</td>
+                </tr>
+                <tr>
+                    <td>1500 თ/ყ</td>
+                    <td>15.38.83</td>
+                    <td>კუშპელოვ იგორ</td>
+                    <td>თბილისი</td>
+                    <td>1959</td>
+                    <td>1976</td>
+                </tr>
+                <tr>
+                    <td>50 ბრასი</td>
+                    <td>00.29:18</td>
+                    <td>ერაძე ლუკა</td>
+                    <td>თბილისი</td>
+                    <td>2002</td>
+                    <td>2021 სოფია</td>
+                </tr>
+                <tr>
+                    <td>100 ბრასი</td>
+                    <td>01.03:41</td>
+                    <td>ბოლქვაძე ირაკლი</td>
+                    <td>თბილისი</td>
+                    <td>1994</td>
+                    <td>2016 ლონდონი</td>
+                </tr>
+                <tr>
+                    <td>200 ბრასი</td>
+                    <td>02.15:46</td>
+                    <td>ბოლქვაძე ირაკლი</td>
+                    <td>თბილისი</td>
+                    <td>1994</td>
+                    <td>2016 ანტვერპენი</td>
+                </tr>
+                <tr>
+                    <td>50 ბატერფლაი</td>
+                    <td>00.24:82</td>
+                    <td>კობახიძე თეიმურაზ</td>
+                    <td>თბილისი</td>
+                    <td>1995</td>
+                    <td>2016 ეინდჰოვენი</td>
+                </tr>
+                <tr>
+                    <td>100 ბატერფლაი</td>
+                    <td>00.55:18</td>
+                    <td>კობახიძე თეიმურაზ</td>
+                    <td>თბილისი</td>
+                    <td>1995</td>
+                    <td>2019 ბუქარესტი</td>
+                </tr>
+                <tr>
+                    <td>200 ბატერფლაი</td>
+                    <td>02.02:53</td>
+                    <td>იაკოვლევი დიმიტრი</td>
+                    <td>თბილისი</td>
+                    <td>1965</td>
+                    <td>1984 კიევი</td>
+                </tr>
+                <tr>
+                    <td>50 გ/ც</td>
+                    <td>00.26.31</td>
+                    <td>ფანცხავა ნოე</td>
+                    <td>გი ეს ეს</td>
+                    <td>2006</td>
+                    <td>2022 ედირნე</td>
+                </tr>
+                <tr>
+                    <td>100 გ/ც</td>
+                    <td>00.56.55</td>
+                    <td>ფანცხავა ნოე</td>
+                    <td>გი ეს ეს</td>
+                    <td>2006</td>
+                    <td>2022 ედირნე</td>
+                </tr>
+                <tr>
+                    <td>200 გ/ც</td>
+                    <td>02.04.55</td>
+                    <td>ფანცხავა ნოე</td>
+                    <td>გი ეს ეს</td>
+                    <td>2006</td>
+                    <td>2022 ედირნე</td>
+                </tr>
+                <tr>
+                    <td>200 კომპლექსი</td>
+                    <td>02.03:55</td>
+                    <td>ბოლქვაძე ირაკლი</td>
+                    <td>თბილისი</td>
+                    <td>1994</td>
+                    <td>2013 ბარსელონა</td>
+                </tr>
+                <tr>
+                    <td>400 კომპლექსი</td>
+                    <td>04.29:25</td>
+                    <td>ბოლქვაძე ირაკლი</td>
+                    <td>თბილისი</td>
+                    <td>1994</td>
+                    <td>2012 უნგრეთი</td>
+                </tr>
+                <tr>
+                    <td>4 x 50 თ/ყ</td>
+                    <td>1.38.14</td>
+                    <td>კოზლოვ, რობინკოვ, მიკაროვ, ზადირაკინ</td>
+                    <td></td>
+                    <td></td>
+                    <td>1986 მოსკოვი</td>
+                </tr>
+                <tr>
+                    <td>4 x 100 თ/ყ</td>
+                    <td>03.28.84</td>
+                    <td>ვაშაკიძე, კუხალაშვილი, კობახიძე, აბესაძე</td>
+                    <td></td>
+                    <td></td>
+                    <td>2021 ათენი</td>
+                </tr>
+                <tr>
+                    <td>4 x 100 კომპლექსი</td>
+                    <td>03.51.91</td>
+                    <td>ვაშაკიძე, ბოლქვაძე, კობახიძე, ბიგანიშვილი</td>
+                    <td></td>
+                    <td></td>
+                    <td>2016 ბრესტი</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tableDiv1">
+            <table id='table'>
+                <caption class="tableHeaders">საქართველოს ნაციონალური რეკორდები (ქალები, 50მ აუზი)</caption>
+                <tr>
+                    <th>დისციპლინა</th>
+                    <th>შედეგი</th>
+                    <th>გვარი/სახელი</th>
+                    <th>წარმომავლობა</th>
+                    <th>დაბადების თარიღი</th>
+                    <th>თარიღი/ლოკაცია</th>
+                </tr>
+                <tr>
+                    <td>50 თ/ყ</td>
+                    <td>00.27.20</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1988 მოსკოვი</td>
+                </tr>
+                <tr>
+                    <td>100 თ/ყ</td>
+                    <td>00.56.40</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1982 ეკვადორი</td>
+                </tr>
+                <tr>
+                    <td>200 თ/ყ</td>
+                    <td>02.01:13</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1982 ეკვადორი</td>
+                </tr>
+                <tr>
+                    <td>400 თ/ყ</td>
+                    <td>04.30:87</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1985 თბილისი</td>
+                </tr>
+                <tr>
+                    <td>800 თ/ყ</td>
+                    <td>09.18:40</td>
+                    <td>პოტაპოვა ინგა</td>
+                    <td>თბილისი</td>
+                    <td>1961</td>
+                    <td>1977 პეტერბურგი</td>
+                </tr>
+                <tr>
+                    <td>1500 თ/ყ</td>
+                    <td>18.05.80</td>
+                    <td>პოტაპოვა ინგა</td>
+                    <td>თბილისი</td>
+                    <td>1961</td>
+                    <td>1975 კიევი</td>
+                </tr>
+                <tr>
+                    <td>50 ბრასი</td>
+                    <td>00.33:50</td>
+                    <td>სვინჩენკო დიანა</td>
+                    <td>თბილისი</td>
+                    <td>2002</td>
+                    <td>2021 სოფია</td>
+                </tr>
+                <tr>
+                    <td>100 ბრასი</td>
+                    <td>01.13:49</td>
+                    <td>მუმლაძე მერი</td>
+                    <td>თბილისი</td>
+                    <td>2001</td>
+                    <td>2016</td>
+                </tr>
+                <tr>
+                    <td>200 ბრასი</td>
+                    <td>02.39:00</td>
+                    <td>მუმლაძე მერი</td>
+                    <td>თბილისი</td>
+                    <td>2001</td>
+                    <td>2016 ბრესტი</td>
+                </tr>
+                <tr>
+                    <td>50 ბატერფლაი</td>
+                    <td>00.30:00</td>
+                    <td>იმნაძე მარიამი</td>
+                    <td>თბილისი</td>
+                    <td>2001</td>
+                    <td>2019 კოშიცე</td>
+                </tr>
+                <tr>
+                    <td>100 ბატერფლაი</td>
+                    <td>01.06:52</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1988 თბილისი</td>
+                </tr>
+                <tr>
+                    <td>200 ბატერფლაი</td>
+                    <td>02.25:79</td>
+                    <td>ციბულსკაია ლარისა</td>
+                    <td>თბილისი</td>
+                    <td>1963</td>
+                    <td>1981 მოსკოვი</td>
+                </tr>
+                <tr>
+                    <td>50 გ/ც</td>
+                    <td>00.31.49</td>
+                    <td>ნიკოლაიშვილი სალომე</td>
+                    <td>თბილისი</td>
+                    <td>2006</td>
+                    <td>2019 სოფია</td>
+                </tr>
+                <tr>
+                    <td>100 გ/ც</td>
+                    <td>01.06:96</td>
+                    <td>ლეკვეიშვილი თინათინ</td>
+                    <td>თბილისი</td>
+                    <td>1954</td>
+                    <td>1972 მიუნხენი</td>
+                </tr>
+                <tr>
+                    <td>200 გ/ც</td>
+                    <td>02.26.50</td>
+                    <td>ლეკვეიშვილი თინათინ</td>
+                    <td>თბილისი</td>
+                    <td>1954</td>
+                    <td>1972 მიუნხენი</td>
+                </tr>
+                <tr>
+                    <td>200 კომპლექსი</td>
+                    <td>02.16:42</td>
+                    <td>გერასიმოვა ირინა</td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1982 ეკვადორი</td>
+                </tr>
+                <tr>
+                    <td>400 კომპლექსი</td>
+                    <td>04.50:30</td>
+                    <td>გერასიმოვა ირინა </td>
+                    <td>თბილისი</td>
+                    <td>1964</td>
+                    <td>1982 კიევი</td>
+                </tr>
+                <tr>
+                    <td>4 x 50 თ/ყ</td>
+                    <td>1.55:87</td>
+                    <td>ნაკრები</td>
+                    <td></td>
+                    <td></td>
+                    <td>1988 მოსკოვი</td>
+                </tr>
+                <tr>
+                    <td>4 x 100 თ/ყ</td>
+                    <td>04.04:61</td>
+                    <td>პოტაპოვა, აზატიანი, ბულაშვილი, გერასიმოვა</td>
+                    <td></td>
+                    <td></td>
+                    <td>1983 მოსკოვი</td>
+                </tr>
+                <tr>
+                    <td>4 x 100 კომპლექსი</td>
+                    <td>04.37:04</td>
+                    <td>ნაკრები</td>
+                    <td></td>
+                    <td></td>
+                    <td>1983 მოსკოვი</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="news" class="hide">
+        <div id="newsAboutMinjo">
+            <div id="newsText">გამარჯობათ. სანამ პლატფორმით ისარგებლებდეთ სამწუხაროდ უნდა შემოგთავაზოთ არასასიამოვნო
+                ინფორმაცია.</div>
+        </div>
+        <button id='newsButton'>შემდეგი</button>
+    </div>
+
+
+
+
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="results.js"></script>
+    <script src="nameslist.js"></script>
+    <script src="FindResults.js"></script>
+    <script src="script.js"></script>
+    <script src="ratings1.js"></script>
+    <script src="finaPoints.js"></script>
+    <script src="competitions.js"></script>
+    <script src="main.js"></script>
+    <script src="bubbles.js"></script>
+
+</body>
+
+</html>
